@@ -1,12 +1,14 @@
 #include "Route.h"
 #include <iostream>
 #include <string>
-
+#include <windows.h>    // Библиотека для русской локализации
 using namespace std;
 
 //конструктор без параметров
 Route::Route()
 {
+	SetConsoleCP(1251);         // Ввод с консоли в кодировке 1251 для русской локализации.
+	SetConsoleOutputCP(1251);   // Вывод на консоль в кодировке 1251 для русской локализации.
 
 	from = "";
 	to = "";
@@ -19,7 +21,7 @@ Route::Route(string N, string K, float S)
 	from = N;
 	to = K;
 	time = S;
-	cout << "Конструктор с параметрами для объекта" << this << endl;
+	cout << "Constructor s parametrami dlia objecta" << this << endl;
 }
 //конструктор копирования
 Route::Route(const Route& t)
@@ -27,12 +29,12 @@ Route::Route(const Route& t)
 	from = t.from;
 	to = t.to;
 	time = t.time;
-	cout << "Конструктор копирования  для объекта" << this << endl;
+	cout << "Constructor copirovania dlia objecta" << this << endl;
 }
 //деструктор
 Route::~Route()
 {
-	cout << "Деструктор для объекта" << this << endl;
+	cout << "Destructor dlia objecta" << this << endl;
 }
 //селекторы
 string Route::get_from()
@@ -63,7 +65,7 @@ void Route::set_time(float S)
 //метод для просмотра атрибутов
 void Route::show()
 {
-	cout << "Пункт отправки :" << from << endl;
-	cout << "Пункт прибытия :" << to << endl;
-	cout << "Время в пути :" << time << endl;
+	cout << "Punkt_otpravki :" << from << endl;
+	cout << "Punkt_pribitiya :" << to << endl;
+	cout << "Vremya :" << time << endl;
 }

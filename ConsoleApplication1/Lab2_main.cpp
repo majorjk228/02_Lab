@@ -4,7 +4,6 @@
 #include "Route.h"
 #include <iostream>
 #include <string>
-#include <windows.h>    // Библиотека для русской локализации
 using namespace std;
 
 //функция для возврата объекта как результата
@@ -14,11 +13,11 @@ Route make_tovar()
 	string i;
 	float d;
 	cout << "\n";
-	cout << "Введите пункт отправления: ";
+	cout << "Vvedite punkt otpravleniya: ";
 	cin >> s;
-	cout << "Введите пункт прибытия: ";
+	cout << "Vvedite punkt pribitiya: ";
 	cin >> i;
-	cout << "Введите время в пути: ";
+	cout << "Vvedite vremiya: ";
 	cin >> d;
 	Route t(s, i, d);
 	return t;
@@ -30,9 +29,6 @@ void print_tovar(Route t)
 }
 void main()
 {
-	SetConsoleCP(1251);         // Ввод с консоли в кодировке 1251 для русской локализации.
-	SetConsoleOutputCP(1251);   // Вывод на консоль в кодировке 1251 для русской локализации.
-
 	//конструктор без параметров
 	Route t1;
 	t1.show();
