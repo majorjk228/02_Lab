@@ -30,8 +30,7 @@ void print_tovar(Route t)
 }
 void main()
 {
-	SetConsoleCP(1251);         // Ввод с консоли в кодировке 1251 для русской локализации.
-	SetConsoleOutputCP(1251);   // Вывод на консоль в кодировке 1251 для русской локализации.
+	setlocale(LC_ALL, "Russian");
 
 	//конструктор без параметров
 	Route t1;
