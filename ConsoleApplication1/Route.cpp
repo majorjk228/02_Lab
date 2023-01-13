@@ -1,6 +1,7 @@
 #include "Route.h"
 #include <iostream>
 #include <string>
+#include <windows.h>    // Библиотека для русской локализации
 
 using namespace std;
 
